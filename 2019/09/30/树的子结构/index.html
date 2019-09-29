@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。 栈为先入后出，队列为先出后入，我们将全部入栈再全部出栈视为函数X，将全部入队再全部出队视为函数Y，则Y(seq)=X(X(seq))。故可使用2个栈，入队时将元素压入栈a，出队时将栈a中的元素全部弹出并压入栈b，再从栈b出栈。 1234567891011121314151617181920212223242526">
+  <meta name="description" content="输入两棵二叉树A，B，判断B是不是A的子结构。（ps：我们约定空树不是任意一个树的子结构） 从根开始完全相等(is)，或在左、右子树(has)。 对于相等(is)，同时遍历。 对于存在(has)，遍历树A。 综上：  遍历树A  若A的当前节点与B的根一致 2. 遍历树B    递归或队列（层次遍历）或栈（前序、中序、后续）均可。 123456789101112131415161718192021">
 <meta name="keywords" content="Berailitz">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用两个栈实现队列">
-<meta property="og:url" content="https://Berailitz.github.io/2019/09/29/用两个栈实现队列/index.html">
+<meta property="og:title" content="树的子结构">
+<meta property="og:url" content="https://Berailitz.github.io/2019/09/30/树的子结构/index.html">
 <meta property="og:site_name" content="Berailitz">
-<meta property="og:description" content="用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。 栈为先入后出，队列为先出后入，我们将全部入栈再全部出栈视为函数X，将全部入队再全部出队视为函数Y，则Y(seq)=X(X(seq))。故可使用2个栈，入队时将元素压入栈a，出队时将栈a中的元素全部弹出并压入栈b，再从栈b出栈。 1234567891011121314151617181920212223242526">
+<meta property="og:description" content="输入两棵二叉树A，B，判断B是不是A的子结构。（ps：我们约定空树不是任意一个树的子结构） 从根开始完全相等(is)，或在左、右子树(has)。 对于相等(is)，同时遍历。 对于存在(has)，遍历树A。 综上：  遍历树A  若A的当前节点与B的根一致 2. 遍历树B    递归或队列（层次遍历）或栈（前序、中序、后续）均可。 123456789101112131415161718192021">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-09-29T17:22:56.921Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用两个栈实现队列">
-<meta name="twitter:description" content="用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。 栈为先入后出，队列为先出后入，我们将全部入栈再全部出栈视为函数X，将全部入队再全部出队视为函数Y，则Y(seq)=X(X(seq))。故可使用2个栈，入队时将元素压入栈a，出队时将栈a中的元素全部弹出并压入栈b，再从栈b出栈。 1234567891011121314151617181920212223242526">
-  <link rel="canonical" href="https://Berailitz.github.io/2019/09/29/用两个栈实现队列/">
+<meta name="twitter:title" content="树的子结构">
+<meta name="twitter:description" content="输入两棵二叉树A，B，判断B是不是A的子结构。（ps：我们约定空树不是任意一个树的子结构） 从根开始完全相等(is)，或在左、右子树(has)。 对于相等(is)，同时遍历。 对于存在(has)，遍历树A。 综上：  遍历树A  若A的当前节点与B的根一致 2. 遍历树B    递归或队列（层次遍历）或栈（前序、中序、后续）均可。 123456789101112131415161718192021">
+  <link rel="canonical" href="https://Berailitz.github.io/2019/09/30/树的子结构/">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>用两个栈实现队列 | Berailitz</title>
+  <title>树的子结构 | Berailitz</title>
   
 
 
@@ -196,7 +196,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="https://Berailitz.github.io/2019/09/29/用两个栈实现队列/">
+    <link itemprop="mainEntityOfPage" href="https://Berailitz.github.io/2019/09/30/树的子结构/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Berailitz">
@@ -208,7 +208,7 @@
       <meta itemprop="name" content="Berailitz">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">用两个栈实现队列
+        <h1 class="post-title" itemprop="name headline">树的子结构
 
           
         </h1>
@@ -224,8 +224,20 @@
                 
               
 
-              <time title="创建时间：2019-09-29 17:22:56" itemprop="dateCreated datePublished" datetime="2019-09-29T17:22:56+00:00">2019-09-29</time>
+              <time title="创建时间：2019-09-30 01:02:01" itemprop="dateCreated datePublished" datetime="2019-09-30T01:02:01+00:00">2019-09-30</time>
             </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-09-29 17:22:56" itemprop="dateModified" datetime="2019-09-29T17:22:56+00:00">2019-09-29</time>
+              </span>
+            
           
 
           
@@ -239,9 +251,22 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。</p>
-<p>栈为先入后出，队列为先出后入，我们将全部入栈再全部出栈视为函数<code>X</code>，将全部入队再全部出队视为函数<code>Y</code>，则<code>Y(seq)=X(X(seq))</code>。故可使用2个栈，入队时将元素压入栈a，出队时将栈a中的元素全部弹出并压入栈b，再从栈b出栈。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> node)</span> </span>&#123;</span><br><span class="line">        stack1.push(node);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> result;</span><br><span class="line">        <span class="keyword">if</span> (stack2.size() &gt; <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            result = stack2.top();</span><br><span class="line">            stack2.pop();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (stack1.size() == <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                result = <span class="number">-1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">while</span> (stack1.size() &gt; <span class="number">0</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    stack2.push(stack1.top());</span><br><span class="line">                    stack1.pop();</span><br><span class="line">                &#125;</span><br><span class="line">                result = stack2.top();</span><br><span class="line">                stack2.pop();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; stack1;</span><br><span class="line">    <span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; stack2;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        <p>输入两棵二叉树A，B，判断B是不是A的子结构。（ps：我们约定空树不是任意一个树的子结构）</p>
+<p>从根开始完全相等(<code>is</code>)，或在左、右子树(<code>has</code>)。</p>
+<p>对于相等(<code>is</code>)，同时遍历。<br>
+对于存在(<code>has</code>)，遍历树<code>A</code>。</p>
+<p>综上：</p>
+<ol>
+<li>遍历树<code>A</code>
+<ol>
+<li>若<code>A</code>的当前节点与<code>B</code>的根一致<br>
+2. 遍历树<code>B</code></li>
+</ol>
+</li>
+</ol>
+<p>递归或队列（层次遍历）或栈（前序、中序、后续）均可。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">struct TreeNode &#123;</span></span><br><span class="line"><span class="comment">	int val;</span></span><br><span class="line"><span class="comment">	struct TreeNode *left;</span></span><br><span class="line"><span class="comment">	struct TreeNode *right;</span></span><br><span class="line"><span class="comment">	TreeNode(int x) :</span></span><br><span class="line"><span class="comment">			val(x), left(NULL), right(NULL) &#123;</span></span><br><span class="line"><span class="comment">	&#125;</span></span><br><span class="line"><span class="comment">&#125;;*/</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">IsSubtree</span><span class="params">(<span class="keyword">const</span> TreeNode <span class="keyword">const</span> * pRoot1, <span class="keyword">const</span> TreeNode <span class="keyword">const</span> * pRoot2)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (pRoot2 == <span class="literal">nullptr</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (pRoot1 == <span class="literal">nullptr</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> pRoot1-&gt;val == pRoot2-&gt;val &amp;&amp; \</span><br><span class="line">                IsSubtree(pRoot1-&gt;left, pRoot2-&gt;left) &amp;&amp; \</span><br><span class="line">                IsSubtree(pRoot1-&gt;right, pRoot2-&gt;right);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">HasSubtree</span><span class="params">(TreeNode* pRoot1, TreeNode* pRoot2)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (pRoot1 == <span class="literal">nullptr</span> || pRoot2 == <span class="literal">nullptr</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> IsSubtree(pRoot1, pRoot2) || \</span><br><span class="line">                HasSubtree(pRoot1-&gt;right, pRoot2) || \</span><br><span class="line">                HasSubtree(pRoot1-&gt;left, pRoot2);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
     </div>
 
     
@@ -257,8 +282,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/29/旋转数组的最小数字/" rel="next" title="旋转数组的最小数字">
-                  <i class="fa fa-chevron-left"></i> 旋转数组的最小数字
+                <a href="/2019/09/30/合并两个排序的链表/" rel="next" title="合并两个排序的链表">
+                  <i class="fa fa-chevron-left"></i> 合并两个排序的链表
                 </a>
               
             </div>
@@ -266,10 +291,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/09/29/斐波那契数列/" rel="prev" title="斐波那契数列">
-                  斐波那契数列 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
