@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。 栈为先入后出，队列为先出后入，我们将全部入栈再全部出栈视为函数X，将全部入队再全部出队视为函数Y，则Y(seq)=X(X(seq))。故可使用2个栈，入队时将元素压入栈a，出队时将栈a中的元素全部弹出并压入栈b，再从栈b出栈。 1234567891011121314151617181920212223242526">
+  <meta name="description" content="输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。 令f(n)f(n)f(n)为n中1的个数。若n≠0n \ne 0n​=0，则在n-1中，n中最右边的1被置为0，而该1的左侧的1保持不变，故 f(n)=f((n−1)&amp;amp;n)+1f(n) = f((n-1)\&amp;amp; n) + 1f(n)=f((n−1)&amp;amp;n)+1 123456789101112class Solu">
 <meta name="keywords" content="Berailitz">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用两个栈实现队列">
-<meta property="og:url" content="https://Berailitz.github.io/2019/09/29/用两个栈实现队列/index.html">
+<meta property="og:title" content="二进制中1的个数">
+<meta property="og:url" content="https://Berailitz.github.io/2019/09/30/二进制中1的个数/index.html">
 <meta property="og:site_name" content="Berailitz">
-<meta property="og:description" content="用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。 栈为先入后出，队列为先出后入，我们将全部入栈再全部出栈视为函数X，将全部入队再全部出队视为函数Y，则Y(seq)=X(X(seq))。故可使用2个栈，入队时将元素压入栈a，出队时将栈a中的元素全部弹出并压入栈b，再从栈b出栈。 1234567891011121314151617181920212223242526">
+<meta property="og:description" content="输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。 令f(n)f(n)f(n)为n中1的个数。若n≠0n \ne 0n​=0，则在n-1中，n中最右边的1被置为0，而该1的左侧的1保持不变，故 f(n)=f((n−1)&amp;amp;n)+1f(n) = f((n-1)\&amp;amp; n) + 1f(n)=f((n−1)&amp;amp;n)+1 123456789101112class Solu">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-09-29T16:39:32.932Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用两个栈实现队列">
-<meta name="twitter:description" content="用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。 栈为先入后出，队列为先出后入，我们将全部入栈再全部出栈视为函数X，将全部入队再全部出队视为函数Y，则Y(seq)=X(X(seq))。故可使用2个栈，入队时将元素压入栈a，出队时将栈a中的元素全部弹出并压入栈b，再从栈b出栈。 1234567891011121314151617181920212223242526">
-  <link rel="canonical" href="https://Berailitz.github.io/2019/09/29/用两个栈实现队列/">
+<meta name="twitter:title" content="二进制中1的个数">
+<meta name="twitter:description" content="输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。 令f(n)f(n)f(n)为n中1的个数。若n≠0n \ne 0n​=0，则在n-1中，n中最右边的1被置为0，而该1的左侧的1保持不变，故 f(n)=f((n−1)&amp;amp;n)+1f(n) = f((n-1)\&amp;amp; n) + 1f(n)=f((n−1)&amp;amp;n)+1 123456789101112class Solu">
+  <link rel="canonical" href="https://Berailitz.github.io/2019/09/30/二进制中1的个数/">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>用两个栈实现队列 | Berailitz</title>
+  <title>二进制中1的个数 | Berailitz</title>
   
 
 
@@ -196,7 +196,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="https://Berailitz.github.io/2019/09/29/用两个栈实现队列/">
+    <link itemprop="mainEntityOfPage" href="https://Berailitz.github.io/2019/09/30/二进制中1的个数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Berailitz">
@@ -208,7 +208,7 @@
       <meta itemprop="name" content="Berailitz">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">用两个栈实现队列
+        <h1 class="post-title" itemprop="name headline">二进制中1的个数
 
           
         </h1>
@@ -224,8 +224,20 @@
                 
               
 
-              <time title="创建时间：2019-09-29 16:39:32" itemprop="dateCreated datePublished" datetime="2019-09-29T16:39:32+00:00">2019-09-29</time>
+              <time title="创建时间：2019-09-30 00:19:44" itemprop="dateCreated datePublished" datetime="2019-09-30T00:19:44+00:00">2019-09-30</time>
             </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-09-29 16:39:32" itemprop="dateModified" datetime="2019-09-29T16:39:32+00:00">2019-09-29</time>
+              </span>
+            
           
 
           
@@ -239,9 +251,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。</p>
-<p>栈为先入后出，队列为先出后入，我们将全部入栈再全部出栈视为函数<code>X</code>，将全部入队再全部出队视为函数<code>Y</code>，则<code>Y(seq)=X(X(seq))</code>。故可使用2个栈，入队时将元素压入栈a，出队时将栈a中的元素全部弹出并压入栈b，再从栈b出栈。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> node)</span> </span>&#123;</span><br><span class="line">        stack1.push(node);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> result;</span><br><span class="line">        <span class="keyword">if</span> (stack2.size() &gt; <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            result = stack2.top();</span><br><span class="line">            stack2.pop();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (stack1.size() == <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                result = <span class="number">-1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">while</span> (stack1.size() &gt; <span class="number">0</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    stack2.push(stack1.top());</span><br><span class="line">                    stack1.pop();</span><br><span class="line">                &#125;</span><br><span class="line">                result = stack2.top();</span><br><span class="line">                stack2.pop();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; stack1;</span><br><span class="line">    <span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; stack2;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        <p>输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。</p>
+<p>令<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>为<code>n</code>中<code>1</code>的个数。若<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mi mathvariant="normal">≠</mi><mn>0</mn></mrow><annotation encoding="application/x-tex">n \ne 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mrel"><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="rlap"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="inner"><span class="mrel"></span></span><span class="fix"></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>，则在<code>n-1</code>中，<code>n</code>中最右边的<code>1</code>被置为<code>0</code>，而该<code>1</code>的左侧的<code>1</code>保持不变，故</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mi mathvariant="normal">&amp;</mi><mi>n</mi><mo stretchy="false">)</mo><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">f(n) = f((n-1)\&amp; n) + 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mord">&amp;</span><span class="mord mathdefault">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">     <span class="function"><span class="keyword">int</span>  <span class="title">NumberOf1</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">         <span class="keyword">int</span> c = <span class="number">0</span>;</span><br><span class="line">         <span class="keyword">while</span> (n)</span><br><span class="line">         &#123;</span><br><span class="line">             c++;</span><br><span class="line">             n &amp;= (n - <span class="number">1</span>);</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="keyword">return</span> c;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -257,8 +270,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/29/跳台阶/" rel="next" title="跳台阶">
-                  <i class="fa fa-chevron-left"></i> 跳台阶
+                <a href="/2019/09/30/矩形覆盖/" rel="next" title="矩形覆盖">
+                  <i class="fa fa-chevron-left"></i> 矩形覆盖
                 </a>
               
             </div>
@@ -266,10 +279,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/09/29/替换空格/" rel="prev" title="替换空格">
-                  替换空格 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
