@@ -11,11 +11,19 @@ branches:
 script:
   - hexo generate # generate static files
 deploy:
-  provider: pages
-  skip_cleanup: true
-  token: $GH_TOKEN
-  keep_history: true
-  on:
-    branch: src
-  local_dir: public
-  target_branch: master
+  - provider: pages
+    skip_cleanup: true
+    token: $GH_TOKEN
+    keep_history: true
+    on:
+      branch: src
+    local_dir: public
+    target_branch: master
+  - provider: pages
+    skip_cleanup: true
+    token: $GH_TOKEN
+    keep_history: true
+    on:
+      branch: dev-hexo
+    local_dir: public
+    target_branch: dev-master
